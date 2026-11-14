@@ -3,15 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dutch Adverbs & Adjectives with English Translations</title>
+  <title>Dutch Adverbs & Adjectives</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <style>
     :root { --pico-font-size: 100%; }
-    .answer-group p, .answers p { margin-bottom: 0.35rem; }
+
+    /* Spoiler styling */
+    .spoiler {
+      background-color: var(--pico-color, #111);
+      color: transparent;
+      user-select: none;
+      border-radius: 4px;
+      padding: 0.1em 0.4em;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease;
+      display: inline-block;
+    }
+    .spoiler.revealed {
+      background-color: var(--pico-muted-background, rgba(128, 128, 128, 0.15));
+      color: inherit;
+      user-select: text;
+    }
     .controls { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
     .badge { font-size: 0.85rem; opacity: 0.8; }
-    table details summary { cursor: pointer; }
     article { margin-bottom: 1.25rem; }
+    table td { vertical-align: middle; }
+
   </style>
 </head>
 <body>
@@ -27,8 +44,11 @@
 
     <header>
       <h1>Dutch Adverbs & Adjectives with English Translations</h1>
-      <p>Reference vocabulary list and translations.</p>
-      
+      <p>Click any blacked-out Dutch answer to reveal it, or use the buttons below.</p>
+      <div class="controls">
+        <button class="outline" onclick="revealAll()">Show All Answers</button>
+        <button class="outline secondary" onclick="hideAll()">Hide All Answers</button>
+      </div>
     </header>
 
     <article>
@@ -38,243 +58,1185 @@
             <tr><th>#</th><th>English</th><th>Dutch forms</th></tr>
           </thead>
           <tbody>
-          <tr><td>1</td><td>good</td><td>goed - beter - best</td></tr>
-          <tr><td>2</td><td>big/great</td><td>groot - groter - grootst</td></tr>
-          <tr><td>3</td><td>small</td><td>klein - kleiner - kleinst</td></tr>
-          <tr><td>4</td><td>new</td><td>nieuw - nieuwer - nieuwst</td></tr>
-          <tr><td>5</td><td>old</td><td>oud - ouder - oudst</td></tr>
-          <tr><td>6</td><td>long</td><td>lang - langer - langst</td></tr>
-          <tr><td>7</td><td>high</td><td>hoog - hoger - hoogst</td></tr>
-          <tr><td>8</td><td>beautiful/nice</td><td>mooi - mooier - mooist</td></tr>
-          <tr><td>9</td><td>important</td><td>belangrijk - belangrijker - belangrijkst</td></tr>
-          <tr><td>10</td><td>difficult/hard</td><td>moeilijk - moeilijker - moeilijkst</td></tr>
-          <tr><td>11</td><td>easy</td><td>makkelijk - makkelijker - makkelijkst</td></tr>
-          <tr><td>12</td><td>young</td><td>jong - jonger - jongst</td></tr>
-          <tr><td>13</td><td>fast/quick</td><td>snel - sneller - snelst</td></tr>
-          <tr><td>14</td><td>different</td><td>anders - (none) - (none)</td></tr>
-          <tr><td>15</td><td>real</td><td>echt - echter - echtst</td></tr>
-          <tr><td>16</td><td>full</td><td>vol - voller - volst</td></tr>
-          <tr><td>17</td><td>far</td><td>ver - verder - verst</td></tr>
-          <tr><td>18</td><td>late</td><td>laat - later - laatst</td></tr>
-          <tr><td>19</td><td>low</td><td>laag - lager - laagst</td></tr>
-          <tr><td>20</td><td>strong</td><td>sterk - sterker - sterkst</td></tr>
-          <tr><td>21</td><td>whole/very</td><td>heel - heler - heelst</td></tr>
-          <tr><td>22</td><td>short</td><td>kort - korter - kortst</td></tr>
-          <tr><td>23</td><td>certain/sure</td><td>zeker - zekerder - zekerst</td></tr>
-          <tr><td>24</td><td>special</td><td>speciaal - specialer - speciaalst</td></tr>
-          <tr><td>25</td><td>nice/fun</td><td>leuk - leuker - leukst</td></tr>
-          <tr><td>26</td><td>clear</td><td>duidelijk - duidelijker - duidelijkst</td></tr>
-          <tr><td>27</td><td>hard/loud</td><td>hard - harder - hardst</td></tr>
-          <tr><td>28</td><td>bad/wrong</td><td>verkeerd - verkeerder - verkeerdst</td></tr>
-          <tr><td>29</td><td>bad</td><td>slecht - slechter - slechtst</td></tr>
-          <tr><td>30</td><td>sweet</td><td>lief - liever - liefst</td></tr>
-          <tr><td>31</td><td>strange/weird</td><td>vreemd - vreemder - vreemdst</td></tr>
-          <tr><td>32</td><td>happy</td><td>gelukkig - gelukkiger - gelukkigst</td></tr>
-          <tr><td>33</td><td>heavy</td><td>zwaar - zwaarder - zwaarst</td></tr>
-          <tr><td>34</td><td>free</td><td>vrij - vrijer - vrijst</td></tr>
-          <tr><td>35</td><td>early</td><td>vroeg - vroeger - vroegst</td></tr>
-          <tr><td>36</td><td>true/correct</td><td>waar - waarder - waarst</td></tr>
-          <tr><td>37</td><td>wide/broad</td><td>breed - breder - breedst</td></tr>
-          <tr><td>38</td><td>rich</td><td>rijk - rijker - rijkst</td></tr>
-          <tr><td>39</td><td>warm</td><td>warm - warmer - warmst</td></tr>
-          <tr><td>40</td><td>cold</td><td>koud - kouder - koudst</td></tr>
-          <tr><td>41</td><td>dry</td><td>droog - droger - droogst</td></tr>
-          <tr><td>42</td><td>wet</td><td>nat - natter - natst</td></tr>
-          <tr><td>43</td><td>white</td><td>wit - witter - witst</td></tr>
-          <tr><td>44</td><td>black</td><td>zwart - zwarter - zwartst</td></tr>
-          <tr><td>45</td><td>red</td><td>rood - roder - roodst</td></tr>
-          <tr><td>46</td><td>green</td><td>groen - groener - groenst</td></tr>
-          <tr><td>47</td><td>blue</td><td>blauw - blauwer - blauwst</td></tr>
-          <tr><td>48</td><td>crazy/mad</td><td>gek - gekker - gekst</td></tr>
-          <tr><td>49</td><td>calm/quiet</td><td>rustig - rustiger - rustigst</td></tr>
-          <tr><td>50</td><td>busy/crowded</td><td>druk - drukker - drukst</td></tr>
-          <tr><td>51</td><td>sick/ill</td><td>ziek - zieker - ziekst</td></tr>
-          <tr><td>52</td><td>healthy</td><td>gezond - gezonder - gezondst</td></tr>
-          <tr><td>53</td><td>deep</td><td>diep - dieper - diepst</td></tr>
-          <tr><td>54</td><td>poor</td><td>arm - armer - armst</td></tr>
-          <tr><td>55</td><td>light/bright</td><td>licht - lichter - lichtst</td></tr>
-          <tr><td>56</td><td>dark</td><td>donker - donkerder - donkerst</td></tr>
-          <tr><td>57</td><td>fast</td><td>vlug - vlugger - vlugst</td></tr>
-          <tr><td>58</td><td>fat/thick</td><td>dik - dikker - dikst</td></tr>
-          <tr><td>59</td><td>thin</td><td>dun - dunner - dunst</td></tr>
-          <tr><td>60</td><td>clean</td><td>schoon - schoner - schoonst</td></tr>
-          <tr><td>61</td><td>dirty</td><td>vies - viezer - viest</td></tr>
-          <tr><td>62</td><td>expensive</td><td>duur - duurder - duurst</td></tr>
-          <tr><td>63</td><td>cheap</td><td>goedkoop - goedkoper - goedkoopst</td></tr>
-          <tr><td>64</td><td>sweet</td><td>zoet - zoeter - zoetst</td></tr>
-          <tr><td>65</td><td>sour</td><td>zuur - zuurder - zuurst</td></tr>
-          <tr><td>66</td><td>open</td><td>open - opener - openst</td></tr>
-          <tr><td>67</td><td>possible</td><td>mogelijk - mogelijker - mogelijkst</td></tr>
-          <tr><td>68</td><td>necessary</td><td>nodig - nodiger - nodigst</td></tr>
-          <tr><td>69</td><td>simple</td><td>simpel - simpeler - simpelst</td></tr>
-          <tr><td>70</td><td>tired</td><td>moe - moeër - meest moe</td></tr>
-          <tr><td>71</td><td>safe</td><td>veilig - veiliger - veiligst</td></tr>
-          <tr><td>72</td><td>dangerous</td><td>gevaarlijk - gevaarlijker - gevaarlijkst</td></tr>
-          <tr><td>73</td><td>fine/nice</td><td>fijn - fijner - fijnst</td></tr>
-          <tr><td>74</td><td>soft</td><td>zacht - zachter - zachtst</td></tr>
-          <tr><td>75</td><td>smart/clever</td><td>slim - slimmer - slimst</td></tr>
-          <tr><td>76</td><td>stupid</td><td>dom - dommer - domst</td></tr>
-          <tr><td>77</td><td>sharp</td><td>scherp - scherper - scherpst</td></tr>
-          <tr><td>78</td><td>blunt/flat</td><td>plat - platter - platst</td></tr>
-          <tr><td>79</td><td>empty</td><td>leeg - leger - leegst</td></tr>
-          <tr><td>80</td><td>angry</td><td>boos - bozer - boost</td></tr>
-          <tr><td>81</td><td>afraid/scared</td><td>bang - banger - bangst</td></tr>
-          <tr><td>82</td><td>glad/happy</td><td>blij - blijer - blijst</td></tr>
-          <tr><td>83</td><td>sad</td><td>verdrietig - verdrietiger - verdrietigst</td></tr>
-          <tr><td>84</td><td>boring</td><td>saai - saaier - saaist</td></tr>
-          <tr><td>85</td><td>interesting</td><td>interessant - interessanter - interessantst</td></tr>
-          <tr><td>86</td><td>fresh</td><td>vers - verser - verst</td></tr>
-          <tr><td>87</td><td>awful/terrible</td><td>erg - erger - ergst</td></tr>
-          <tr><td>88</td><td>serious</td><td>serieus - serieuzer - serieust</td></tr>
-          <tr><td>89</td><td>famous</td><td>beroemd - beroemder - beroemdst</td></tr>
-          <tr><td>90</td><td>normal</td><td>normaal - normaler - normaalst</td></tr>
-          <tr><td>91</td><td>usual</td><td>gewoon - gewoner - gewoonst</td></tr>
-          <tr><td>92</td><td>extraordinary/special</td><td>bijzonder - bijzonderder - bijzonderst</td></tr>
-          <tr><td>93</td><td>careful</td><td>voorzichtig - voorzichtiger - voorzichtigst</td></tr>
-          <tr><td>94</td><td>honest</td><td>eerlijk - eerlijker - eerlijkst</td></tr>
-          <tr><td>95</td><td>false/fake</td><td>vals - valser - valst</td></tr>
-          <tr><td>96</td><td>polite</td><td>beleefd - beleefder - beleefdst</td></tr>
-          <tr><td>97</td><td>rude</td><td>onbeleefd - onbeleefder - onbeleefdst</td></tr>
-          <tr><td>98</td><td>friendly</td><td>vriendelijk - vriendelijker - vriendelijkst</td></tr>
-          <tr><td>99</td><td>unkind</td><td>onaardig - onaardiger - onaardigst</td></tr>
-          <tr><td>100</td><td>nice/kind</td><td>aardig - aardiger - aardigst</td></tr>
-          <tr><td>101</td><td>active</td><td>actief - actiever - actiefst</td></tr>
-          <tr><td>102</td><td>passive</td><td>passief - passiever - passiefst</td></tr>
-          <tr><td>103</td><td>lazy</td><td>lui - luier - luist</td></tr>
-          <tr><td>104</td><td>tired</td><td>moe - moeër - meest moe</td></tr>
-          <tr><td>105</td><td>awake</td><td>wakker - wakkerder - wakkerst</td></tr>
-          <tr><td>106</td><td>loose</td><td>los - losser - lost</td></tr>
-          <tr><td>107</td><td>tight</td><td>vast - vaster - vastst</td></tr>
-          <tr><td>108</td><td>rough</td><td>ruw - ruwer - ruwst</td></tr>
-          <tr><td>109</td><td>smooth/even</td><td>glad - gladder - gladst</td></tr>
-          <tr><td>110</td><td>narrow</td><td>smal - smaller - smalst</td></tr>
-          <tr><td>111</td><td>weak</td><td>zwak - zwakker - zwakst</td></tr>
-          <tr><td>112</td><td>clever/wise</td><td>wijs - wijzer - wijst</td></tr>
-          <tr><td>113</td><td>brave</td><td>dapper - dapperder - dapperst</td></tr>
-          <tr><td>114</td><td>cowardly</td><td>laf - laffer - lafst</td></tr>
-          <tr><td>115</td><td>proud</td><td>trots - trotser - trotst</td></tr>
-          <tr><td>116</td><td>jealous</td><td>jaloers - jaloersen - jaloerst</td></tr>
-          <tr><td>117</td><td>curious</td><td>nieuwsgierig - nieuwsgieriger - nieuwsgierigst</td></tr>
-          <tr><td>118</td><td>nervous</td><td>zenuwachtig - zenuwachtiger - zenuwachtigst</td></tr>
-          <tr><td>119</td><td>shy</td><td>verlegen - (none) - (none)</td></tr>
-          <tr><td>120</td><td>ugly</td><td>lelijk - lelijker - lelijkst</td></tr>
-          <tr><td>121</td><td>tasty/delicious</td><td>lekker - lekkerder - lekkerst</td></tr>
-          <tr><td>122</td><td>bitter</td><td>bitter - bitterder - bitterst</td></tr>
-          <tr><td>123</td><td>salty</td><td>zout - zouter - zoutst</td></tr>
-          <tr><td>124</td><td>modern</td><td>modern - moderner - modernst</td></tr>
-          <tr><td>125</td><td>classic</td><td>klassiek - klassieker - klassiekst</td></tr>
-          <tr><td>126</td><td>popular</td><td>populair - populairder - populairst</td></tr>
-          <tr><td>127</td><td>public</td><td>openbaar - openbaarder - openbaarst</td></tr>
-          <tr><td>128</td><td>private</td><td>privé - (none) - (none)</td></tr>
-          <tr><td>129</td><td>social</td><td>sociaal - socialer - sociaalst</td></tr>
-          <tr><td>130</td><td>alone/lonely</td><td>eenzaam - eenzamer - eenzaamst</td></tr>
-          <tr><td>131</td><td>together</td><td>samen - (none) - (none)</td></tr>
-          <tr><td>132</td><td>available</td><td>beschikbaar - beschikbaarder - beschikbaarst</td></tr>
-          <tr><td>133</td><td>ready</td><td>klaar - (none) - (none)</td></tr>
-          <tr><td>134</td><td>typical</td><td>typisch - typischer - typischst</td></tr>
-          <tr><td>135</td><td>perfect</td><td>perfect - perfecter - perfectst</td></tr>
-          <tr><td>136</td><td>excellent</td><td>uitstekend - uitstekender - uitstekendst</td></tr>
-          <tr><td>137</td><td>wonderful</td><td>geweldig - geweldiger - geweldigst</td></tr>
-          <tr><td>138</td><td>fantastic</td><td>fantastisch - fantastischer - fantastischst</td></tr>
-          <tr><td>139</td><td>terrible/awful</td><td>verschrikkelijk - verschrikkelijker - verschrikkelijkst</td></tr>
-          <tr><td>140</td><td>awful/nasty</td><td>naar - naarder - naarst</td></tr>
-          <tr><td>141</td><td>purple</td><td>paars - paarser - paarst</td></tr>
-          <tr><td>142</td><td>orange</td><td>oranje - oranjer - oranjest</td></tr>
-          <tr><td>143</td><td>grey</td><td>grijs - grijzer - grijst</td></tr>
-          <tr><td>144</td><td>brown</td><td>bruin - bruiner - bruinst</td></tr>
-          <tr><td>145</td><td>yellow</td><td>geel - geler - geelst</td></tr>
-          <tr><td>146</td><td>flat</td><td>vlak - vlakker - vlakst</td></tr>
-          <tr><td>147</td><td>steep</td><td>steil - steiler - steilst</td></tr>
-          <tr><td>148</td><td>straight</td><td>recht - rechter - rechtst</td></tr>
-          <tr><td>149</td><td>crooked</td><td>krom - krommer - kromst</td></tr>
-          <tr><td>150</td><td>round</td><td>rond - ronder - rondst</td></tr>
-          <tr><td>151</td><td>square</td><td>vierkant - vierkanter - vierkantst</td></tr>
-          <tr><td>152</td><td>horizontal</td><td>horizontaal - horizontaler - horizontaalst</td></tr>
-          <tr><td>153</td><td>vertical</td><td>verticaal - verticaler - verticaalst</td></tr>
-          <tr><td>154</td><td>wet/damp</td><td>vochtig - vochtiger - vochtigst</td></tr>
-          <tr><td>155</td><td>foggy</td><td>mistig - mistiger - mistigst</td></tr>
-          <tr><td>156</td><td>windy</td><td>winderig - winderiger - winderigst</td></tr>
-          <tr><td>157</td><td>sunny</td><td>zonnig - zonniger - zonnigst</td></tr>
-          <tr><td>158</td><td>cloudy</td><td>bewolkt - bewolkter - bewolktst</td></tr>
-          <tr><td>159</td><td>rainy</td><td>regenachtig - regenachtiger - regenachtigst</td></tr>
-          <tr><td>160</td><td>cool</td><td>koel - koeler - koelst</td></tr>
-          <tr><td>161</td><td>lukewarm</td><td>lauw - lauwer - lauwst</td></tr>
-          <tr><td>162</td><td>pale</td><td>bleek - bleker - bleekst</td></tr>
-          <tr><td>163</td><td>tan/browned</td><td>gebruind - (none) - (none)</td></tr>
-          <tr><td>164</td><td>bald</td><td>kaal - kaler - kaalst</td></tr>
-          <tr><td>165</td><td>hairy</td><td>harig - hariger - harigst</td></tr>
-          <tr><td>166</td><td>naked/nude</td><td>naakt - naakter - naaktst</td></tr>
-          <tr><td>167</td><td>dressed</td><td>gekleed - (none) - (none)</td></tr>
-          <tr><td>168</td><td>formal</td><td>formeel - formeler - formeelst</td></tr>
-          <tr><td>169</td><td>informal</td><td>informeel - informeler - informeelst</td></tr>
-          <tr><td>170</td><td>dependent</td><td>afhankelijk - afhankelijker - afhankelijkst</td></tr>
-          <tr><td>171</td><td>independent</td><td>onafhankelijk - onafhankelijker - onafhankelijkst</td></tr>
-          <tr><td>172</td><td>legal</td><td>legaal - legaler - legaalst</td></tr>
-          <tr><td>173</td><td>illegal</td><td>illegaal - illegaler - illegaalst</td></tr>
-          <tr><td>174</td><td>responsible</td><td>verantwoordelijk - verantwoordelijker - verantwoordelijkst</td></tr>
-          <tr><td>175</td><td>guilty</td><td>schuldig - schuldiger - schuldigst</td></tr>
-          <tr><td>176</td><td>innocent</td><td>onschuldig - onschuldiger - onschuldigst</td></tr>
-          <tr><td>177</td><td>strict</td><td>streng - strenger - strengst</td></tr>
-          <tr><td>178</td><td>flexible</td><td>flexibel - flexibeler - flexibelst</td></tr>
-          <tr><td>179</td><td>rigid/stiff</td><td>stijf - stijver - stijfst</td></tr>
-          <tr><td>180</td><td>tense</td><td>gespannen - (none) - (none)</td></tr>
-          <tr><td>181</td><td>relaxed</td><td>ontspannen - (none) - (none)</td></tr>
-          <tr><td>182</td><td>huge</td><td>enorm - enoemer - enormst</td></tr>
-          <tr><td>183</td><td>tiny</td><td>winzig - winziger - winzigst</td></tr>
-          <tr><td>184</td><td>frequent</td><td>frequent - frequenter - frequentst</td></tr>
-          <tr><td>185</td><td>rare</td><td>zeldzaam - zeldzamer - zeldzaamst</td></tr>
-          <tr><td>186</td><td>general</td><td>algemeen - algemener - algemeenst</td></tr>
-          <tr><td>187</td><td>specific</td><td>specifiek - specifieker - specifiekst</td></tr>
-          <tr><td>188</td><td>total</td><td>totaal - totaler - totaalst</td></tr>
-          <tr><td>189</td><td>partial</td><td>gedeeltelijk - (none) - (none)</td></tr>
-          <tr><td>190</td><td>absolute</td><td>absoluut - absoluter - absoluutst</td></tr>
-          <tr><td>191</td><td>relative</td><td>relatief - relatiever - relatiefst</td></tr>
-          <tr><td>192</td><td>exact</td><td>precies - preciezer - precierst</td></tr>
-          <tr><td>193</td><td>accurate</td><td>nauwkeurig - nauwkeuriger - nauwkeurigst</td></tr>
-          <tr><td>194</td><td>messy</td><td>rommelig - rommeliger - rommeligst</td></tr>
-          <tr><td>195</td><td>neat/tidy</td><td>netjes - (none) - (none)</td></tr>
-          <tr><td>196</td><td>organized</td><td>georganiseerd - georganiseerder - georganiseerdst</td></tr>
-          <tr><td>197</td><td>chaotic</td><td>chaotisch - chaotischer - chaotischst</td></tr>
-          <tr><td>198</td><td>logical</td><td>logisch - logischer - logischst</td></tr>
-          <tr><td>199</td><td>illogical</td><td>onlogisch - onlogischer - onlogischst</td></tr>
-          <tr><td>200</td><td>sensible</td><td>verstandig - verstandiger - verstandigst</td></tr>
-          <tr><td>201</td><td>foolish</td><td>dwaas - dwazer - dwaast</td></tr>
-          <tr><td>202</td><td>annoying</td><td>vervelend - vervelender - vervelendst</td></tr>
-          <tr><td>203</td><td>irritating</td><td>irritant - irritanter - irritantst</td></tr>
-          <tr><td>204</td><td>painful</td><td>pijnlijk - pijnlijker - pijnlijkst</td></tr>
-          <tr><td>205</td><td>painless</td><td>pijnloos - (none) - (none)</td></tr>
-          <tr><td>206</td><td>powerful</td><td>krachtig - krachtiger - krachtigst</td></tr>
-          <tr><td>207</td><td>useless</td><td>nutteloos - nuttelozer - nutteloost</td></tr>
-          <tr><td>208</td><td>useful</td><td>nuttig - nuttiger - nuttigst</td></tr>
-          <tr><td>209</td><td>hollow</td><td>hol - holler - holst</td></tr>
-          <tr><td>210</td><td>shallow</td><td>ondiep - ondieper - ondiepst</td></tr>
-          <tr><td>211</td><td>steep</td><td>steil - steiler - steilst</td></tr>
-          <tr><td>212</td><td>sincere</td><td>oprecht - oprechter - oprechtst</td></tr>
-          <tr><td>213</td><td>suspicious</td><td>verdacht - verdachter - verdachtst</td></tr>
-          <tr><td>214</td><td>traditional</td><td>traditioneel - traditioneler - traditioneelst</td></tr>
-          <tr><td>215</td><td>cultural</td><td>cultureel - cultureler - cultureelst</td></tr>
-          <tr><td>216</td><td>expensive/dear</td><td>kostbaar - kostbaarder - kostbaarst</td></tr>
-          <tr><td>217</td><td>valuable</td><td>waardevol - waardevoller - waardevolst</td></tr>
-          <tr><td>218</td><td>worthless</td><td>waardeloos - waardelozer - waardeloost</td></tr>
-          <tr><td>219</td><td>silent</td><td>stil - stiller - stilst</td></tr>
-          <tr><td>220</td><td>noisy</td><td>luidruchtig - luidruchtiger - luidruchtigst</td></tr>
-          <tr><td>221</td><td>deaf</td><td>doof - dover - doofst</td></tr>
-          <tr><td>222</td><td>blind</td><td>blind - blinder - blindst</td></tr>
-          <tr><td>223</td><td>much/many</td><td>veel - meer - meest</td></tr>
-          <tr><td>224</td><td>little/few</td><td>weinig - minder - minst</td></tr>
-          <tr><td>225</td><td>gladly/with pleasure</td><td>graag - liever - liefst</td></tr>
-          <tr><td>226</td><td>often</td><td>vaak - vaker - vaakst</td></tr>
-          <tr><td>227</td><td>seldom</td><td>zelden - (none) - (none)</td></tr>
-          <tr><td>228</td><td>sometimes</td><td>soms - (none) - (none)</td></tr>
-          <tr><td>229</td><td>never</td><td>nooit - (none) - (none)</td></tr>
-          <tr><td>230</td><td>always</td><td>altijd - (none) - (none)</td></tr>
-          <tr><td>231</td><td>everywhere</td><td>overal - (none) - (none)</td></tr>
-          <tr><td>232</td><td>nowhere</td><td>nergens - (none) - (none)</td></tr>
+          <tr>
+            <td>1</td>
+            <td>good</td>
+            <td><span class="spoiler">goed - beter - best</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>big/great</td>
+            <td><span class="spoiler">groot - groter - grootst</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>small</td>
+            <td><span class="spoiler">klein - kleiner - kleinst</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>new</td>
+            <td><span class="spoiler">nieuw - nieuwer - nieuwst</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>old</td>
+            <td><span class="spoiler">oud - ouder - oudst</span></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>long</td>
+            <td><span class="spoiler">lang - langer - langst</span></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>high</td>
+            <td><span class="spoiler">hoog - hoger - hoogst</span></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>beautiful/nice</td>
+            <td><span class="spoiler">mooi - mooier - mooist</span></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>important</td>
+            <td><span class="spoiler">belangrijk - belangrijker - belangrijkst</span></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>difficult/hard</td>
+            <td><span class="spoiler">moeilijk - moeilijker - moeilijkst</span></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>easy</td>
+            <td><span class="spoiler">makkelijk - makkelijker - makkelijkst</span></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>young</td>
+            <td><span class="spoiler">jong - jonger - jongst</span></td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>fast/quick</td>
+            <td><span class="spoiler">snel - sneller - snelst</span></td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>different</td>
+            <td><span class="spoiler">anders - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>real</td>
+            <td><span class="spoiler">echt - echter - echtst</span></td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>full</td>
+            <td><span class="spoiler">vol - voller - volst</span></td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>far</td>
+            <td><span class="spoiler">ver - verder - verst</span></td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>late</td>
+            <td><span class="spoiler">laat - later - laatst</span></td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>low</td>
+            <td><span class="spoiler">laag - lager - laagst</span></td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>strong</td>
+            <td><span class="spoiler">sterk - sterker - sterkst</span></td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>whole/very</td>
+            <td><span class="spoiler">heel - heler - heelst</span></td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>short</td>
+            <td><span class="spoiler">kort - korter - kortst</span></td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>certain/sure</td>
+            <td><span class="spoiler">zeker - zekerder - zekerst</span></td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>special</td>
+            <td><span class="spoiler">speciaal - specialer - speciaalst</span></td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>nice/fun</td>
+            <td><span class="spoiler">leuk - leuker - leukst</span></td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>clear</td>
+            <td><span class="spoiler">duidelijk - duidelijker - duidelijkst</span></td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>hard/loud</td>
+            <td><span class="spoiler">hard - harder - hardst</span></td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td>bad/wrong</td>
+            <td><span class="spoiler">verkeerd - verkeerder - verkeerdst</span></td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>bad</td>
+            <td><span class="spoiler">slecht - slechter - slechtst</span></td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>sweet</td>
+            <td><span class="spoiler">lief - liever - liefst</span></td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>strange/weird</td>
+            <td><span class="spoiler">vreemd - vreemder - vreemdst</span></td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>happy</td>
+            <td><span class="spoiler">gelukkig - gelukkiger - gelukkigst</span></td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>heavy</td>
+            <td><span class="spoiler">zwaar - zwaarder - zwaarst</span></td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td>free</td>
+            <td><span class="spoiler">vrij - vrijer - vrijst</span></td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td>early</td>
+            <td><span class="spoiler">vroeg - vroeger - vroegst</span></td>
+          </tr>
+          <tr>
+            <td>36</td>
+            <td>true/correct</td>
+            <td><span class="spoiler">waar - waarder - waarst</span></td>
+          </tr>
+          <tr>
+            <td>37</td>
+            <td>wide/broad</td>
+            <td><span class="spoiler">breed - breder - breedst</span></td>
+          </tr>
+          <tr>
+            <td>38</td>
+            <td>rich</td>
+            <td><span class="spoiler">rijk - rijker - rijkst</span></td>
+          </tr>
+          <tr>
+            <td>39</td>
+            <td>warm</td>
+            <td><span class="spoiler">warm - warmer - warmst</span></td>
+          </tr>
+          <tr>
+            <td>40</td>
+            <td>cold</td>
+            <td><span class="spoiler">koud - kouder - koudst</span></td>
+          </tr>
+          <tr>
+            <td>41</td>
+            <td>dry</td>
+            <td><span class="spoiler">droog - droger - droogst</span></td>
+          </tr>
+          <tr>
+            <td>42</td>
+            <td>wet</td>
+            <td><span class="spoiler">nat - natter - natst</span></td>
+          </tr>
+          <tr>
+            <td>43</td>
+            <td>white</td>
+            <td><span class="spoiler">wit - witter - witst</span></td>
+          </tr>
+          <tr>
+            <td>44</td>
+            <td>black</td>
+            <td><span class="spoiler">zwart - zwarter - zwartst</span></td>
+          </tr>
+          <tr>
+            <td>45</td>
+            <td>red</td>
+            <td><span class="spoiler">rood - roder - roodst</span></td>
+          </tr>
+          <tr>
+            <td>46</td>
+            <td>green</td>
+            <td><span class="spoiler">groen - groener - groenst</span></td>
+          </tr>
+          <tr>
+            <td>47</td>
+            <td>blue</td>
+            <td><span class="spoiler">blauw - blauwer - blauwst</span></td>
+          </tr>
+          <tr>
+            <td>48</td>
+            <td>crazy/mad</td>
+            <td><span class="spoiler">gek - gekker - gekst</span></td>
+          </tr>
+          <tr>
+            <td>49</td>
+            <td>calm/quiet</td>
+            <td><span class="spoiler">rustig - rustiger - rustigst</span></td>
+          </tr>
+          <tr>
+            <td>50</td>
+            <td>busy/crowded</td>
+            <td><span class="spoiler">druk - drukker - drukst</span></td>
+          </tr>
+          <tr>
+            <td>51</td>
+            <td>sick/ill</td>
+            <td><span class="spoiler">ziek - zieker - ziekst</span></td>
+          </tr>
+          <tr>
+            <td>52</td>
+            <td>healthy</td>
+            <td><span class="spoiler">gezond - gezonder - gezondst</span></td>
+          </tr>
+          <tr>
+            <td>53</td>
+            <td>deep</td>
+            <td><span class="spoiler">diep - dieper - diepst</span></td>
+          </tr>
+          <tr>
+            <td>54</td>
+            <td>poor</td>
+            <td><span class="spoiler">arm - armer - armst</span></td>
+          </tr>
+          <tr>
+            <td>55</td>
+            <td>light/bright</td>
+            <td><span class="spoiler">licht - lichter - lichtst</span></td>
+          </tr>
+          <tr>
+            <td>56</td>
+            <td>dark</td>
+            <td><span class="spoiler">donker - donkerder - donkerst</span></td>
+          </tr>
+          <tr>
+            <td>57</td>
+            <td>fast</td>
+            <td><span class="spoiler">vlug - vlugger - vlugst</span></td>
+          </tr>
+          <tr>
+            <td>58</td>
+            <td>fat/thick</td>
+            <td><span class="spoiler">dik - dikker - dikst</span></td>
+          </tr>
+          <tr>
+            <td>59</td>
+            <td>thin</td>
+            <td><span class="spoiler">dun - dunner - dunst</span></td>
+          </tr>
+          <tr>
+            <td>60</td>
+            <td>clean</td>
+            <td><span class="spoiler">schoon - schoner - schoonst</span></td>
+          </tr>
+          <tr>
+            <td>61</td>
+            <td>dirty</td>
+            <td><span class="spoiler">vies - viezer - viest</span></td>
+          </tr>
+          <tr>
+            <td>62</td>
+            <td>expensive</td>
+            <td><span class="spoiler">duur - duurder - duurst</span></td>
+          </tr>
+          <tr>
+            <td>63</td>
+            <td>cheap</td>
+            <td><span class="spoiler">goedkoop - goedkoper - goedkoopst</span></td>
+          </tr>
+          <tr>
+            <td>64</td>
+            <td>sweet</td>
+            <td><span class="spoiler">zoet - zoeter - zoetst</span></td>
+          </tr>
+          <tr>
+            <td>65</td>
+            <td>sour</td>
+            <td><span class="spoiler">zuur - zuurder - zuurst</span></td>
+          </tr>
+          <tr>
+            <td>66</td>
+            <td>open</td>
+            <td><span class="spoiler">open - opener - openst</span></td>
+          </tr>
+          <tr>
+            <td>67</td>
+            <td>possible</td>
+            <td><span class="spoiler">mogelijk - mogelijker - mogelijkst</span></td>
+          </tr>
+          <tr>
+            <td>68</td>
+            <td>necessary</td>
+            <td><span class="spoiler">nodig - nodiger - nodigst</span></td>
+          </tr>
+          <tr>
+            <td>69</td>
+            <td>simple</td>
+            <td><span class="spoiler">simpel - simpeler - simpelst</span></td>
+          </tr>
+          <tr>
+            <td>70</td>
+            <td>tired</td>
+            <td><span class="spoiler">moe - moeër - meest moe</span></td>
+          </tr>
+          <tr>
+            <td>71</td>
+            <td>safe</td>
+            <td><span class="spoiler">veilig - veiliger - veiligst</span></td>
+          </tr>
+          <tr>
+            <td>72</td>
+            <td>dangerous</td>
+            <td><span class="spoiler">gevaarlijk - gevaarlijker - gevaarlijkst</span></td>
+          </tr>
+          <tr>
+            <td>73</td>
+            <td>fine/nice</td>
+            <td><span class="spoiler">fijn - fijner - fijnst</span></td>
+          </tr>
+          <tr>
+            <td>74</td>
+            <td>soft</td>
+            <td><span class="spoiler">zacht - zachter - zachtst</span></td>
+          </tr>
+          <tr>
+            <td>75</td>
+            <td>smart/clever</td>
+            <td><span class="spoiler">slim - slimmer - slimst</span></td>
+          </tr>
+          <tr>
+            <td>76</td>
+            <td>stupid</td>
+            <td><span class="spoiler">dom - dommer - domst</span></td>
+          </tr>
+          <tr>
+            <td>77</td>
+            <td>sharp</td>
+            <td><span class="spoiler">scherp - scherper - scherpst</span></td>
+          </tr>
+          <tr>
+            <td>78</td>
+            <td>blunt/flat</td>
+            <td><span class="spoiler">plat - platter - platst</span></td>
+          </tr>
+          <tr>
+            <td>79</td>
+            <td>empty</td>
+            <td><span class="spoiler">leeg - leger - leegst</span></td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td>angry</td>
+            <td><span class="spoiler">boos - bozer - boost</span></td>
+          </tr>
+          <tr>
+            <td>81</td>
+            <td>afraid/scared</td>
+            <td><span class="spoiler">bang - banger - bangst</span></td>
+          </tr>
+          <tr>
+            <td>82</td>
+            <td>glad/happy</td>
+            <td><span class="spoiler">blij - blijer - blijst</span></td>
+          </tr>
+          <tr>
+            <td>83</td>
+            <td>sad</td>
+            <td><span class="spoiler">verdrietig - verdrietiger - verdrietigst</span></td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td>boring</td>
+            <td><span class="spoiler">saai - saaier - saaist</span></td>
+          </tr>
+          <tr>
+            <td>85</td>
+            <td>interesting</td>
+            <td><span class="spoiler">interessant - interessanter - interessantst</span></td>
+          </tr>
+          <tr>
+            <td>86</td>
+            <td>fresh</td>
+            <td><span class="spoiler">vers - verser - verst</span></td>
+          </tr>
+          <tr>
+            <td>87</td>
+            <td>awful/terrible</td>
+            <td><span class="spoiler">erg - erger - ergst</span></td>
+          </tr>
+          <tr>
+            <td>88</td>
+            <td>serious</td>
+            <td><span class="spoiler">serieus - serieuzer - serieust</span></td>
+          </tr>
+          <tr>
+            <td>89</td>
+            <td>famous</td>
+            <td><span class="spoiler">beroemd - beroemder - beroemdst</span></td>
+          </tr>
+          <tr>
+            <td>90</td>
+            <td>normal</td>
+            <td><span class="spoiler">normaal - normaler - normaalst</span></td>
+          </tr>
+          <tr>
+            <td>91</td>
+            <td>usual</td>
+            <td><span class="spoiler">gewoon - gewoner - gewoonst</span></td>
+          </tr>
+          <tr>
+            <td>92</td>
+            <td>extraordinary/special</td>
+            <td><span class="spoiler">bijzonder - bijzonderder - bijzonderst</span></td>
+          </tr>
+          <tr>
+            <td>93</td>
+            <td>careful</td>
+            <td><span class="spoiler">voorzichtig - voorzichtiger - voorzichtigst</span></td>
+          </tr>
+          <tr>
+            <td>94</td>
+            <td>honest</td>
+            <td><span class="spoiler">eerlijk - eerlijker - eerlijkst</span></td>
+          </tr>
+          <tr>
+            <td>95</td>
+            <td>false/fake</td>
+            <td><span class="spoiler">vals - valser - valst</span></td>
+          </tr>
+          <tr>
+            <td>96</td>
+            <td>polite</td>
+            <td><span class="spoiler">beleefd - beleefder - beleefdst</span></td>
+          </tr>
+          <tr>
+            <td>97</td>
+            <td>rude</td>
+            <td><span class="spoiler">onbeleefd - onbeleefder - onbeleefdst</span></td>
+          </tr>
+          <tr>
+            <td>98</td>
+            <td>friendly</td>
+            <td><span class="spoiler">vriendelijk - vriendelijker - vriendelijkst</span></td>
+          </tr>
+          <tr>
+            <td>99</td>
+            <td>unkind</td>
+            <td><span class="spoiler">onaardig - onaardiger - onaardigst</span></td>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>nice/kind</td>
+            <td><span class="spoiler">aardig - aardiger - aardigst</span></td>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>active</td>
+            <td><span class="spoiler">actief - actiever - actiefst</span></td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>passive</td>
+            <td><span class="spoiler">passief - passiever - passiefst</span></td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>lazy</td>
+            <td><span class="spoiler">lui - luier - luist</span></td>
+          </tr>
+          <tr>
+            <td>104</td>
+            <td>tired</td>
+            <td><span class="spoiler">moe - moeër - meest moe</span></td>
+          </tr>
+          <tr>
+            <td>105</td>
+            <td>awake</td>
+            <td><span class="spoiler">wakker - wakkerder - wakkerst</span></td>
+          </tr>
+          <tr>
+            <td>106</td>
+            <td>loose</td>
+            <td><span class="spoiler">los - losser - lost</span></td>
+          </tr>
+          <tr>
+            <td>107</td>
+            <td>tight</td>
+            <td><span class="spoiler">vast - vaster - vastst</span></td>
+          </tr>
+          <tr>
+            <td>108</td>
+            <td>rough</td>
+            <td><span class="spoiler">ruw - ruwer - ruwst</span></td>
+          </tr>
+          <tr>
+            <td>109</td>
+            <td>smooth/even</td>
+            <td><span class="spoiler">glad - gladder - gladst</span></td>
+          </tr>
+          <tr>
+            <td>110</td>
+            <td>narrow</td>
+            <td><span class="spoiler">smal - smaller - smalst</span></td>
+          </tr>
+          <tr>
+            <td>111</td>
+            <td>weak</td>
+            <td><span class="spoiler">zwak - zwakker - zwakst</span></td>
+          </tr>
+          <tr>
+            <td>112</td>
+            <td>clever/wise</td>
+            <td><span class="spoiler">wijs - wijzer - wijst</span></td>
+          </tr>
+          <tr>
+            <td>113</td>
+            <td>brave</td>
+            <td><span class="spoiler">dapper - dapperder - dapperst</span></td>
+          </tr>
+          <tr>
+            <td>114</td>
+            <td>cowardly</td>
+            <td><span class="spoiler">laf - laffer - lafst</span></td>
+          </tr>
+          <tr>
+            <td>115</td>
+            <td>proud</td>
+            <td><span class="spoiler">trots - trotser - trotst</span></td>
+          </tr>
+          <tr>
+            <td>116</td>
+            <td>jealous</td>
+            <td><span class="spoiler">jaloers - jaloersen - jaloerst</span></td>
+          </tr>
+          <tr>
+            <td>117</td>
+            <td>curious</td>
+            <td><span class="spoiler">nieuwsgierig - nieuwsgieriger - nieuwsgierigst</span></td>
+          </tr>
+          <tr>
+            <td>118</td>
+            <td>nervous</td>
+            <td><span class="spoiler">zenuwachtig - zenuwachtiger - zenuwachtigst</span></td>
+          </tr>
+          <tr>
+            <td>119</td>
+            <td>shy</td>
+            <td><span class="spoiler">verlegen - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>120</td>
+            <td>ugly</td>
+            <td><span class="spoiler">lelijk - lelijker - lelijkst</span></td>
+          </tr>
+          <tr>
+            <td>121</td>
+            <td>tasty/delicious</td>
+            <td><span class="spoiler">lekker - lekkerder - lekkerst</span></td>
+          </tr>
+          <tr>
+            <td>122</td>
+            <td>bitter</td>
+            <td><span class="spoiler">bitter - bitterder - bitterst</span></td>
+          </tr>
+          <tr>
+            <td>123</td>
+            <td>salty</td>
+            <td><span class="spoiler">zout - zouter - zoutst</span></td>
+          </tr>
+          <tr>
+            <td>124</td>
+            <td>modern</td>
+            <td><span class="spoiler">modern - moderner - modernst</span></td>
+          </tr>
+          <tr>
+            <td>125</td>
+            <td>classic</td>
+            <td><span class="spoiler">klassiek - klassieker - klassiekst</span></td>
+          </tr>
+          <tr>
+            <td>126</td>
+            <td>popular</td>
+            <td><span class="spoiler">populair - populairder - populairst</span></td>
+          </tr>
+          <tr>
+            <td>127</td>
+            <td>public</td>
+            <td><span class="spoiler">openbaar - openbaarder - openbaarst</span></td>
+          </tr>
+          <tr>
+            <td>128</td>
+            <td>private</td>
+            <td><span class="spoiler">privé - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>129</td>
+            <td>social</td>
+            <td><span class="spoiler">sociaal - socialer - sociaalst</span></td>
+          </tr>
+          <tr>
+            <td>130</td>
+            <td>alone/lonely</td>
+            <td><span class="spoiler">eenzaam - eenzamer - eenzaamst</span></td>
+          </tr>
+          <tr>
+            <td>131</td>
+            <td>together</td>
+            <td><span class="spoiler">samen - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>132</td>
+            <td>available</td>
+            <td><span class="spoiler">beschikbaar - beschikbaarder - beschikbaarst</span></td>
+          </tr>
+          <tr>
+            <td>133</td>
+            <td>ready</td>
+            <td><span class="spoiler">klaar - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>134</td>
+            <td>typical</td>
+            <td><span class="spoiler">typisch - typischer - typischst</span></td>
+          </tr>
+          <tr>
+            <td>135</td>
+            <td>perfect</td>
+            <td><span class="spoiler">perfect - perfecter - perfectst</span></td>
+          </tr>
+          <tr>
+            <td>136</td>
+            <td>excellent</td>
+            <td><span class="spoiler">uitstekend - uitstekender - uitstekendst</span></td>
+          </tr>
+          <tr>
+            <td>137</td>
+            <td>wonderful</td>
+            <td><span class="spoiler">geweldig - geweldiger - geweldigst</span></td>
+          </tr>
+          <tr>
+            <td>138</td>
+            <td>fantastic</td>
+            <td><span class="spoiler">fantastisch - fantastischer - fantastischst</span></td>
+          </tr>
+          <tr>
+            <td>139</td>
+            <td>terrible/awful</td>
+            <td><span class="spoiler">verschrikkelijk - verschrikkelijker - verschrikkelijkst</span></td>
+          </tr>
+          <tr>
+            <td>140</td>
+            <td>awful/nasty</td>
+            <td><span class="spoiler">naar - naarder - naarst</span></td>
+          </tr>
+          <tr>
+            <td>141</td>
+            <td>purple</td>
+            <td><span class="spoiler">paars - paarser - paarst</span></td>
+          </tr>
+          <tr>
+            <td>142</td>
+            <td>orange</td>
+            <td><span class="spoiler">oranje - oranjer - oranjest</span></td>
+          </tr>
+          <tr>
+            <td>143</td>
+            <td>grey</td>
+            <td><span class="spoiler">grijs - grijzer - grijst</span></td>
+          </tr>
+          <tr>
+            <td>144</td>
+            <td>brown</td>
+            <td><span class="spoiler">bruin - bruiner - bruinst</span></td>
+          </tr>
+          <tr>
+            <td>145</td>
+            <td>yellow</td>
+            <td><span class="spoiler">geel - geler - geelst</span></td>
+          </tr>
+          <tr>
+            <td>146</td>
+            <td>flat</td>
+            <td><span class="spoiler">vlak - vlakker - vlakst</span></td>
+          </tr>
+          <tr>
+            <td>147</td>
+            <td>steep</td>
+            <td><span class="spoiler">steil - steiler - steilst</span></td>
+          </tr>
+          <tr>
+            <td>148</td>
+            <td>straight</td>
+            <td><span class="spoiler">recht - rechter - rechtst</span></td>
+          </tr>
+          <tr>
+            <td>149</td>
+            <td>crooked</td>
+            <td><span class="spoiler">krom - krommer - kromst</span></td>
+          </tr>
+          <tr>
+            <td>150</td>
+            <td>round</td>
+            <td><span class="spoiler">rond - ronder - rondst</span></td>
+          </tr>
+          <tr>
+            <td>151</td>
+            <td>square</td>
+            <td><span class="spoiler">vierkant - vierkanter - vierkantst</span></td>
+          </tr>
+          <tr>
+            <td>152</td>
+            <td>horizontal</td>
+            <td><span class="spoiler">horizontaal - horizontaler - horizontaalst</span></td>
+          </tr>
+          <tr>
+            <td>153</td>
+            <td>vertical</td>
+            <td><span class="spoiler">verticaal - verticaler - verticaalst</span></td>
+          </tr>
+          <tr>
+            <td>154</td>
+            <td>wet/damp</td>
+            <td><span class="spoiler">vochtig - vochtiger - vochtigst</span></td>
+          </tr>
+          <tr>
+            <td>155</td>
+            <td>foggy</td>
+            <td><span class="spoiler">mistig - mistiger - mistigst</span></td>
+          </tr>
+          <tr>
+            <td>156</td>
+            <td>windy</td>
+            <td><span class="spoiler">winderig - winderiger - winderigst</span></td>
+          </tr>
+          <tr>
+            <td>157</td>
+            <td>sunny</td>
+            <td><span class="spoiler">zonnig - zonniger - zonnigst</span></td>
+          </tr>
+          <tr>
+            <td>158</td>
+            <td>cloudy</td>
+            <td><span class="spoiler">bewolkt - bewolkter - bewolktst</span></td>
+          </tr>
+          <tr>
+            <td>159</td>
+            <td>rainy</td>
+            <td><span class="spoiler">regenachtig - regenachtiger - regenachtigst</span></td>
+          </tr>
+          <tr>
+            <td>160</td>
+            <td>cool</td>
+            <td><span class="spoiler">koel - koeler - koelst</span></td>
+          </tr>
+          <tr>
+            <td>161</td>
+            <td>lukewarm</td>
+            <td><span class="spoiler">lauw - lauwer - lauwst</span></td>
+          </tr>
+          <tr>
+            <td>162</td>
+            <td>pale</td>
+            <td><span class="spoiler">bleek - bleker - bleekst</span></td>
+          </tr>
+          <tr>
+            <td>163</td>
+            <td>tan/browned</td>
+            <td><span class="spoiler">gebruind - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>164</td>
+            <td>bald</td>
+            <td><span class="spoiler">kaal - kaler - kaalst</span></td>
+          </tr>
+          <tr>
+            <td>165</td>
+            <td>hairy</td>
+            <td><span class="spoiler">harig - hariger - harigst</span></td>
+          </tr>
+          <tr>
+            <td>166</td>
+            <td>naked/nude</td>
+            <td><span class="spoiler">naakt - naakter - naaktst</span></td>
+          </tr>
+          <tr>
+            <td>167</td>
+            <td>dressed</td>
+            <td><span class="spoiler">gekleed - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>168</td>
+            <td>formal</td>
+            <td><span class="spoiler">formeel - formeler - formeelst</span></td>
+          </tr>
+          <tr>
+            <td>169</td>
+            <td>informal</td>
+            <td><span class="spoiler">informeel - informeler - informeelst</span></td>
+          </tr>
+          <tr>
+            <td>170</td>
+            <td>dependent</td>
+            <td><span class="spoiler">afhankelijk - afhankelijker - afhankelijkst</span></td>
+          </tr>
+          <tr>
+            <td>171</td>
+            <td>independent</td>
+            <td><span class="spoiler">onafhankelijk - onafhankelijker - onafhankelijkst</span></td>
+          </tr>
+          <tr>
+            <td>172</td>
+            <td>legal</td>
+            <td><span class="spoiler">legaal - legaler - legaalst</span></td>
+          </tr>
+          <tr>
+            <td>173</td>
+            <td>illegal</td>
+            <td><span class="spoiler">illegaal - illegaler - illegaalst</span></td>
+          </tr>
+          <tr>
+            <td>174</td>
+            <td>responsible</td>
+            <td><span class="spoiler">verantwoordelijk - verantwoordelijker - verantwoordelijkst</span></td>
+          </tr>
+          <tr>
+            <td>175</td>
+            <td>guilty</td>
+            <td><span class="spoiler">schuldig - schuldiger - schuldigst</span></td>
+          </tr>
+          <tr>
+            <td>176</td>
+            <td>innocent</td>
+            <td><span class="spoiler">onschuldig - onschuldiger - onschuldigst</span></td>
+          </tr>
+          <tr>
+            <td>177</td>
+            <td>strict</td>
+            <td><span class="spoiler">streng - strenger - strengst</span></td>
+          </tr>
+          <tr>
+            <td>178</td>
+            <td>flexible</td>
+            <td><span class="spoiler">flexibel - flexibeler - flexibelst</span></td>
+          </tr>
+          <tr>
+            <td>179</td>
+            <td>rigid/stiff</td>
+            <td><span class="spoiler">stijf - stijver - stijfst</span></td>
+          </tr>
+          <tr>
+            <td>180</td>
+            <td>tense</td>
+            <td><span class="spoiler">gespannen - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>181</td>
+            <td>relaxed</td>
+            <td><span class="spoiler">ontspannen - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>182</td>
+            <td>huge</td>
+            <td><span class="spoiler">enorm - enoemer - enormst</span></td>
+          </tr>
+          <tr>
+            <td>183</td>
+            <td>tiny</td>
+            <td><span class="spoiler">winzig - winziger - winzigst</span></td>
+          </tr>
+          <tr>
+            <td>184</td>
+            <td>frequent</td>
+            <td><span class="spoiler">frequent - frequenter - frequentst</span></td>
+          </tr>
+          <tr>
+            <td>185</td>
+            <td>rare</td>
+            <td><span class="spoiler">zeldzaam - zeldzamer - zeldzaamst</span></td>
+          </tr>
+          <tr>
+            <td>186</td>
+            <td>general</td>
+            <td><span class="spoiler">algemeen - algemener - algemeenst</span></td>
+          </tr>
+          <tr>
+            <td>187</td>
+            <td>specific</td>
+            <td><span class="spoiler">specifiek - specifieker - specifiekst</span></td>
+          </tr>
+          <tr>
+            <td>188</td>
+            <td>total</td>
+            <td><span class="spoiler">totaal - totaler - totaalst</span></td>
+          </tr>
+          <tr>
+            <td>189</td>
+            <td>partial</td>
+            <td><span class="spoiler">gedeeltelijk - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>190</td>
+            <td>absolute</td>
+            <td><span class="spoiler">absoluut - absoluter - absoluutst</span></td>
+          </tr>
+          <tr>
+            <td>191</td>
+            <td>relative</td>
+            <td><span class="spoiler">relatief - relatiever - relatiefst</span></td>
+          </tr>
+          <tr>
+            <td>192</td>
+            <td>exact</td>
+            <td><span class="spoiler">precies - preciezer - precierst</span></td>
+          </tr>
+          <tr>
+            <td>193</td>
+            <td>accurate</td>
+            <td><span class="spoiler">nauwkeurig - nauwkeuriger - nauwkeurigst</span></td>
+          </tr>
+          <tr>
+            <td>194</td>
+            <td>messy</td>
+            <td><span class="spoiler">rommelig - rommeliger - rommeligst</span></td>
+          </tr>
+          <tr>
+            <td>195</td>
+            <td>neat/tidy</td>
+            <td><span class="spoiler">netjes - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>196</td>
+            <td>organized</td>
+            <td><span class="spoiler">georganiseerd - georganiseerder - georganiseerdst</span></td>
+          </tr>
+          <tr>
+            <td>197</td>
+            <td>chaotic</td>
+            <td><span class="spoiler">chaotisch - chaotischer - chaotischst</span></td>
+          </tr>
+          <tr>
+            <td>198</td>
+            <td>logical</td>
+            <td><span class="spoiler">logisch - logischer - logischst</span></td>
+          </tr>
+          <tr>
+            <td>199</td>
+            <td>illogical</td>
+            <td><span class="spoiler">onlogisch - onlogischer - onlogischst</span></td>
+          </tr>
+          <tr>
+            <td>200</td>
+            <td>sensible</td>
+            <td><span class="spoiler">verstandig - verstandiger - verstandigst</span></td>
+          </tr>
+          <tr>
+            <td>201</td>
+            <td>foolish</td>
+            <td><span class="spoiler">dwaas - dwazer - dwaast</span></td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>annoying</td>
+            <td><span class="spoiler">vervelend - vervelender - vervelendst</span></td>
+          </tr>
+          <tr>
+            <td>203</td>
+            <td>irritating</td>
+            <td><span class="spoiler">irritant - irritanter - irritantst</span></td>
+          </tr>
+          <tr>
+            <td>204</td>
+            <td>painful</td>
+            <td><span class="spoiler">pijnlijk - pijnlijker - pijnlijkst</span></td>
+          </tr>
+          <tr>
+            <td>205</td>
+            <td>painless</td>
+            <td><span class="spoiler">pijnloos - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>206</td>
+            <td>powerful</td>
+            <td><span class="spoiler">krachtig - krachtiger - krachtigst</span></td>
+          </tr>
+          <tr>
+            <td>207</td>
+            <td>useless</td>
+            <td><span class="spoiler">nutteloos - nuttelozer - nutteloost</span></td>
+          </tr>
+          <tr>
+            <td>208</td>
+            <td>useful</td>
+            <td><span class="spoiler">nuttig - nuttiger - nuttigst</span></td>
+          </tr>
+          <tr>
+            <td>209</td>
+            <td>hollow</td>
+            <td><span class="spoiler">hol - holler - holst</span></td>
+          </tr>
+          <tr>
+            <td>210</td>
+            <td>shallow</td>
+            <td><span class="spoiler">ondiep - ondieper - ondiepst</span></td>
+          </tr>
+          <tr>
+            <td>211</td>
+            <td>steep</td>
+            <td><span class="spoiler">steil - steiler - steilst</span></td>
+          </tr>
+          <tr>
+            <td>212</td>
+            <td>sincere</td>
+            <td><span class="spoiler">oprecht - oprechter - oprechtst</span></td>
+          </tr>
+          <tr>
+            <td>213</td>
+            <td>suspicious</td>
+            <td><span class="spoiler">verdacht - verdachter - verdachtst</span></td>
+          </tr>
+          <tr>
+            <td>214</td>
+            <td>traditional</td>
+            <td><span class="spoiler">traditioneel - traditioneler - traditioneelst</span></td>
+          </tr>
+          <tr>
+            <td>215</td>
+            <td>cultural</td>
+            <td><span class="spoiler">cultureel - cultureler - cultureelst</span></td>
+          </tr>
+          <tr>
+            <td>216</td>
+            <td>expensive/dear</td>
+            <td><span class="spoiler">kostbaar - kostbaarder - kostbaarst</span></td>
+          </tr>
+          <tr>
+            <td>217</td>
+            <td>valuable</td>
+            <td><span class="spoiler">waardevol - waardevoller - waardevolst</span></td>
+          </tr>
+          <tr>
+            <td>218</td>
+            <td>worthless</td>
+            <td><span class="spoiler">waardeloos - waardelozer - waardeloost</span></td>
+          </tr>
+          <tr>
+            <td>219</td>
+            <td>silent</td>
+            <td><span class="spoiler">stil - stiller - stilst</span></td>
+          </tr>
+          <tr>
+            <td>220</td>
+            <td>noisy</td>
+            <td><span class="spoiler">luidruchtig - luidruchtiger - luidruchtigst</span></td>
+          </tr>
+          <tr>
+            <td>221</td>
+            <td>deaf</td>
+            <td><span class="spoiler">doof - dover - doofst</span></td>
+          </tr>
+          <tr>
+            <td>222</td>
+            <td>blind</td>
+            <td><span class="spoiler">blind - blinder - blindst</span></td>
+          </tr>
+          <tr>
+            <td>223</td>
+            <td>much/many</td>
+            <td><span class="spoiler">veel - meer - meest</span></td>
+          </tr>
+          <tr>
+            <td>224</td>
+            <td>little/few</td>
+            <td><span class="spoiler">weinig - minder - minst</span></td>
+          </tr>
+          <tr>
+            <td>225</td>
+            <td>gladly/with pleasure</td>
+            <td><span class="spoiler">graag - liever - liefst</span></td>
+          </tr>
+          <tr>
+            <td>226</td>
+            <td>often</td>
+            <td><span class="spoiler">vaak - vaker - vaakst</span></td>
+          </tr>
+          <tr>
+            <td>227</td>
+            <td>seldom</td>
+            <td><span class="spoiler">zelden - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>228</td>
+            <td>sometimes</td>
+            <td><span class="spoiler">soms - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>229</td>
+            <td>never</td>
+            <td><span class="spoiler">nooit - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>230</td>
+            <td>always</td>
+            <td><span class="spoiler">altijd - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>231</td>
+            <td>everywhere</td>
+            <td><span class="spoiler">overal - (none) - (none)</span></td>
+          </tr>
+          <tr>
+            <td>232</td>
+            <td>nowhere</td>
+            <td><span class="spoiler">nergens - (none) - (none)</span></td>
+          </tr>
           </tbody>
         </table>
       </figure>
     </article>
   </main>
+
+  <script>
+    function revealAll() {
+      document.querySelectorAll('.spoiler').forEach(el => el.classList.add('revealed'));
+    }
+    function hideAll() {
+      document.querySelectorAll('.spoiler').forEach(el => el.classList.remove('revealed'));
+    }
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('spoiler')) {
+        e.target.classList.toggle('revealed');
+      }
+    });
+  </script>
 
 </body>
 </html>

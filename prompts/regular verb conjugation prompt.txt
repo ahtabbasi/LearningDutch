@@ -16,13 +16,32 @@ Format Requirements:
 - Use valid HTML5 with Pico.css: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 - Navigation at the top: `<a href="../../index.html">← Back to Index</a>`
 - Title: Dutch Verb Conjugation Practice - Regular Verbs (A2 Level)
-- Include global "Expand All" / "Collapse All" buttons.
+- Style for blackout spoilers:
+  .spoiler {
+    background-color: var(--pico-color, #111);
+    color: transparent;
+    user-select: none;
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    display: inline-block;
+  }
+  .spoiler.revealed {
+    background-color: var(--pico-muted-background, rgba(128, 128, 128, 0.15));
+    color: inherit;
+    user-select: text;
+  }
+- Include global buttons at the top:
+  <button class="outline" onclick="revealAll()">Show All Answers</button>
+  <button class="outline secondary" onclick="hideAll()">Hide All Answers</button>
+- Include JS for toggling individual spoilers on click, and functions revealAll() and hideAll().
 - For each sentence (1 to 20):
   Wrap in an `<article>` with `<h3>{number}. {English sentence}</h3>`
-  Followed by a `<details><summary>Click to see answers</summary>` containing:
-    <p><strong>Present tense:</strong> {Dutch translation present tense}</p>
-    <p><strong>Perfectum:</strong> {Dutch translation perfectum}</p>
-    <p><strong>Imperfectum:</strong> {Dutch translation imperfectum}</p>
-  </details>
+  Followed by a `<div class="answers">` containing:
+    <p><strong>Present tense:</strong> <span class="spoiler">{Dutch translation present tense}</span></p>
+    <p><strong>Perfectum:</strong> <span class="spoiler">{Dutch translation perfectum}</span></p>
+    <p><strong>Imperfectum:</strong> <span class="spoiler">{Dutch translation imperfectum}</span></p>
+  </div>
 
 File name format: practice/regular_verbs_practice/regular_verbs_practice_{file_number}.html

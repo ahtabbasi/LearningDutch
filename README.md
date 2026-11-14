@@ -2,16 +2,14 @@
 
 > Disclaimer: This is AI generated content so please be careful!
 
-This repository contains Dutch learning and practice exercises built as standalone HTML pages using [Pico.css](https://picocss.com/).
+This repository contains Dutch learning and practice exercises built as standalone HTML pages using [Pico.css](https://picocss.com/) with interactive click-to-reveal blacked-out spoiler answers.
 
 ### Table of Contents
 
 - **[Main Index / Dashboard](index.html)**
 - **Adjectives & Adverbs**
   - [Adjectives](practice/adjectives_and_adverbs/adjectives.html)
-  - [Adjectives — hidden answers](practice/adjectives_and_adverbs/adjectives_hidden_answers.html)
-  - [Adverbs](practice/adjectives_and_adverbs/adverbs.html)
-  - [Adverbs — hidden answers](practice/adjectives_and_adverbs/adverbs_hidden_answers.html)
+  - [Adverbs & Degrees](practice/adjectives_and_adverbs/adverbs.html)
 - **Regular Verbs**
   - [Practice set 1](practice/regular_verbs_practice/regular_verbs_practice_1.html)
   - [Practice set 2](practice/regular_verbs_practice/regular_verbs_practice_2.html)

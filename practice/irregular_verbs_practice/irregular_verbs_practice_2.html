@@ -7,11 +7,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <style>
     :root { --pico-font-size: 100%; }
-    .answer-group p, .answers p { margin-bottom: 0.35rem; }
+
+    /* Spoiler styling */
+    .spoiler {
+      background-color: var(--pico-color, #111);
+      color: transparent;
+      user-select: none;
+      border-radius: 4px;
+      padding: 0.1em 0.4em;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease;
+      display: inline-block;
+    }
+    .spoiler.revealed {
+      background-color: var(--pico-muted-background, rgba(128, 128, 128, 0.15));
+      color: inherit;
+      user-select: text;
+    }
     .controls { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
     .badge { font-size: 0.85rem; opacity: 0.8; }
-    table details summary { cursor: pointer; }
     article { margin-bottom: 1.25rem; }
+    .answer-group p, .answers p { margin-bottom: 0.35rem; }
+
   </style>
 </head>
 <body>
@@ -28,237 +45,187 @@
     <header>
       <h1>Dutch Verb Conjugation Practice - Irregular Verbs (A2 Level)</h1>
       <p>Practice translating these English sentences to Dutch. Focus on irregular verb conjugation in present tense, perfectum (past participle), and imperfectum (simple past).</p>
-            <div class="controls">
-        <button class="outline" onclick="toggleAll(true)">Expand All</button>
-        <button class="outline secondary" onclick="toggleAll(false)">Collapse All</button>
+      <div class="controls">
+        <button class="outline" onclick="revealAll()">Show All Answers</button>
+        <button class="outline secondary" onclick="hideAll()">Hide All Answers</button>
       </div>
     </header>
 
     <article>
       <h3>1. I drink water every morning.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Ik drink elke ochtend water.</p>
-          <p><strong>Perfectum:</strong> Ik heb elke ochtend water gedronken.</p>
-          <p><strong>Imperfectum:</strong> Ik dronk elke ochtend water.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Ik drink elke ochtend water.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Ik heb elke ochtend water gedronken.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Ik dronk elke ochtend water.</span></p>
+      </div>
     </article>
     <article>
       <h3>2. Do you go to the gym after work?</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Ga jij na het werk naar de sportschool?</p>
-          <p><strong>Perfectum:</strong> Ben jij na het werk naar de sportschool gegaan?</p>
-          <p><strong>Imperfectum:</strong> Ging jij na het werk naar de sportschool?</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Ga jij na het werk naar de sportschool?</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Ben jij na het werk naar de sportschool gegaan?</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Ging jij na het werk naar de sportschool?</span></p>
+      </div>
     </article>
     <article>
       <h3>3. They don't take the train on Mondays.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Zij nemen op maandag de trein niet.</p>
-          <p><strong>Perfectum:</strong> Zij hebben op maandag de trein niet genomen.</p>
-          <p><strong>Imperfectum:</strong> Zij namen op maandag de trein niet.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Zij nemen op maandag de trein niet.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Zij hebben op maandag de trein niet genomen.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Zij namen op maandag de trein niet.</span></p>
+      </div>
     </article>
     <article>
       <h3>4. When does she come home?</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Wanneer komt zij thuis?</p>
-          <p><strong>Perfectum:</strong> Wanneer is zij thuisgekomen?</p>
-          <p><strong>Imperfectum:</strong> Wanneer kwam zij thuis?</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Wanneer komt zij thuis?</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Wanneer is zij thuisgekomen?</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Wanneer kwam zij thuis?</span></p>
+      </div>
     </article>
     <article>
       <h3>5. We see the teacher at school.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Wij zien de leraar op school.</p>
-          <p><strong>Perfectum:</strong> Wij hebben de leraar op school gezien.</p>
-          <p><strong>Imperfectum:</strong> Wij zagen de leraar op school.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Wij zien de leraar op school.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Wij hebben de leraar op school gezien.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Wij zagen de leraar op school.</span></p>
+      </div>
     </article>
     <article>
       <h3>6. Because he is tired, he goes to bed early.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Omdat hij moe is, gaat hij vroeg naar bed.</p>
-          <p><strong>Perfectum:</strong> Omdat hij moe is geweest, is hij vroeg naar bed gegaan.</p>
-          <p><strong>Imperfectum:</strong> Omdat hij moe was, ging hij vroeg naar bed.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Omdat hij moe is, gaat hij vroeg naar bed.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Omdat hij moe is geweest, is hij vroeg naar bed gegaan.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Omdat hij moe was, ging hij vroeg naar bed.</span></p>
+      </div>
     </article>
     <article>
       <h3>7. I know that you are right.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Ik weet dat jij gelijk hebt.</p>
-          <p><strong>Perfectum:</strong> Ik heb geweten dat jij gelijk had.</p>
-          <p><strong>Imperfectum:</strong> Ik wist dat jij gelijk had.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Ik weet dat jij gelijk hebt.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Ik heb geweten dat jij gelijk had.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Ik wist dat jij gelijk had.</span></p>
+      </div>
     </article>
     <article>
       <h3>8. Tonight I bring my guitar to the party.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Vanavond neem ik mijn gitaar mee naar het feest.</p>
-          <p><strong>Perfectum:</strong> Vanavond heb ik mijn gitaar mee naar het feest genomen.</p>
-          <p><strong>Imperfectum:</strong> Vanavond nam ik mijn gitaar mee naar het feest.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Vanavond neem ik mijn gitaar mee naar het feest.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Vanavond heb ik mijn gitaar mee naar het feest genomen.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Vanavond nam ik mijn gitaar mee naar het feest.</span></p>
+      </div>
     </article>
     <article>
       <h3>9. Can you give me the salt?</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Kun jij mij het zout geven?</p>
-          <p><strong>Perfectum:</strong> Heb jij mij het zout kunnen geven?</p>
-          <p><strong>Imperfectum:</strong> Kon jij mij het zout geven?</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Kun jij mij het zout geven?</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Heb jij mij het zout kunnen geven?</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Kon jij mij het zout geven?</span></p>
+      </div>
     </article>
     <article>
       <h3>10. I must be quiet in the library.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Ik moet stil zijn in de bibliotheek.</p>
-          <p><strong>Perfectum:</strong> Ik heb stil moeten zijn in de bibliotheek.</p>
-          <p><strong>Imperfectum:</strong> Ik moest stil zijn in de bibliotheek.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Ik moet stil zijn in de bibliotheek.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Ik heb stil moeten zijn in de bibliotheek.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Ik moest stil zijn in de bibliotheek.</span></p>
+      </div>
     </article>
     <article>
       <h3>11. They don't understand the story yet.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Zij begrijpen het verhaal nog niet.</p>
-          <p><strong>Perfectum:</strong> Zij hebben het verhaal nog niet begrepen.</p>
-          <p><strong>Imperfectum:</strong> Zij begrepen het verhaal nog niet.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Zij begrijpen het verhaal nog niet.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Zij hebben het verhaal nog niet begrepen.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Zij begrepen het verhaal nog niet.</span></p>
+      </div>
     </article>
     <article>
       <h3>12. She lets her brother help with the homework.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Zij laat haar broer met het huiswerk helpen.</p>
-          <p><strong>Perfectum:</strong> Zij heeft haar broer met het huiswerk laten helpen.</p>
-          <p><strong>Imperfectum:</strong> Zij liet haar broer met het huiswerk helpen.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Zij laat haar broer met het huiswerk helpen.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Zij heeft haar broer met het huiswerk laten helpen.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Zij liet haar broer met het huiswerk helpen.</span></p>
+      </div>
     </article>
     <article>
       <h3>13. When I enter the house, I take off my shoes.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Wanneer ik het huis binnenkom, trek ik mijn schoenen uit.</p>
-          <p><strong>Perfectum:</strong> Wanneer ik het huis ben binnengekomen, heb ik mijn schoenen uitgetrokken.</p>
-          <p><strong>Imperfectum:</strong> Wanneer ik het huis binnenkwam, trok ik mijn schoenen uit.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Wanneer ik het huis binnenkom, trek ik mijn schoenen uit.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Wanneer ik het huis ben binnengekomen, heb ik mijn schoenen uitgetrokken.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Wanneer ik het huis binnenkwam, trok ik mijn schoenen uit.</span></p>
+      </div>
     </article>
     <article>
       <h3>14. After dinner, we go for a walk.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Na het avondeten gaan wij wandelen.</p>
-          <p><strong>Perfectum:</strong> Na het avondeten zijn wij gaan wandelen.</p>
-          <p><strong>Imperfectum:</strong> Na het avondeten gingen wij wandelen.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Na het avondeten gaan wij wandelen.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Na het avondeten zijn wij gaan wandelen.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Na het avondeten gingen wij wandelen.</span></p>
+      </div>
     </article>
     <article>
       <h3>15. I keep myself calm when it rains.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Ik houd me kalm wanneer het regent.</p>
-          <p><strong>Perfectum:</strong> Ik heb me kalm gehouden wanneer het regende.</p>
-          <p><strong>Imperfectum:</strong> Ik hield me kalm wanneer het regende.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Ik houd me kalm wanneer het regent.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Ik heb me kalm gehouden wanneer het regende.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Ik hield me kalm wanneer het regende.</span></p>
+      </div>
     </article>
     <article>
       <h3>16. Do you get up when the alarm rings?</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Sta jij op zodra de wekker gaat?</p>
-          <p><strong>Perfectum:</strong> Ben jij opgestaan zodra de wekker ging?</p>
-          <p><strong>Imperfectum:</strong> Stond jij op zodra de wekker ging?</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Sta jij op zodra de wekker gaat?</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Ben jij opgestaan zodra de wekker ging?</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Stond jij op zodra de wekker ging?</span></p>
+      </div>
     </article>
     <article>
       <h3>17. If we have time, we come to your place.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Als wij tijd hebben, komen wij naar jou toe.</p>
-          <p><strong>Perfectum:</strong> Als wij tijd hebben gehad, zijn wij naar jou toe gekomen.</p>
-          <p><strong>Imperfectum:</strong> Als wij tijd hadden, kwamen wij naar jou toe.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Als wij tijd hebben, komen wij naar jou toe.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Als wij tijd hebben gehad, zijn wij naar jou toe gekomen.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Als wij tijd hadden, kwamen wij naar jou toe.</span></p>
+      </div>
     </article>
     <article>
       <h3>18. I wash myself before breakfast.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Ik was me voor het ontbijt.</p>
-          <p><strong>Perfectum:</strong> Ik heb me voor het ontbijt gewassen.</p>
-          <p><strong>Imperfectum:</strong> Ik waste me voor het ontbijt.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Ik was me voor het ontbijt.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Ik heb me voor het ontbijt gewassen.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Ik waste me voor het ontbijt.</span></p>
+      </div>
     </article>
     <article>
       <h3>19. Do they bring their parents along to the concert?</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Nemen zij hun ouders mee naar het concert?</p>
-          <p><strong>Perfectum:</strong> Hebben zij hun ouders mee naar het concert genomen?</p>
-          <p><strong>Imperfectum:</strong> Namen zij hun ouders mee naar het concert?</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Nemen zij hun ouders mee naar het concert?</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Hebben zij hun ouders mee naar het concert genomen?</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Namen zij hun ouders mee naar het concert?</span></p>
+      </div>
     </article>
     <article>
       <h3>20. When I see him, I tell him the secret.</h3>
-      <details>
-        <summary>Click to see answers</summary>
-        <div class="answers">
-          <p><strong>Present tense:</strong> Wanneer ik hem zie, vertel ik hem het geheim.</p>
-          <p><strong>Perfectum:</strong> Wanneer ik hem heb gezien, heb ik hem het geheim verteld.</p>
-          <p><strong>Imperfectum:</strong> Wanneer ik hem zag, vertelde ik hem het geheim.</p>
-        </div>
-      </details>
+      <div class="answers">
+      <p><strong>Present tense:</strong> <span class="spoiler">Wanneer ik hem zie, vertel ik hem het geheim.</span></p>
+      <p><strong>Perfectum:</strong> <span class="spoiler">Wanneer ik hem heb gezien, heb ik hem het geheim verteld.</span></p>
+      <p><strong>Imperfectum:</strong> <span class="spoiler">Wanneer ik hem zag, vertelde ik hem het geheim.</span></p>
+      </div>
     </article>
   </main>
+
   <script>
-    function toggleAll(openState) {
-      document.querySelectorAll('details').forEach(d => d.open = openState);
+    function revealAll() {
+      document.querySelectorAll('.spoiler').forEach(el => el.classList.add('revealed'));
     }
+    function hideAll() {
+      document.querySelectorAll('.spoiler').forEach(el => el.classList.remove('revealed'));
+    }
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('spoiler')) {
+        e.target.classList.toggle('revealed');
+      }
+    });
   </script>
+
 </body>
 </html>
