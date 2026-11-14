@@ -18,7 +18,7 @@ Format Requirements:
 - Title: Dutch Verb Conjugation Practice - Regular Verbs (A2 Level)
 - Style for blackout spoilers:
   .spoiler {
-    background-color: var(--pico-color, #111);
+    background-color: #6c757d;
     color: transparent;
     user-select: none;
     border-radius: 4px;
