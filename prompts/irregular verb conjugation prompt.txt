@@ -2,4 +2,5 @@ Do everything as described in prompts/regular verb conjugation prompt.txt
 
 BUT:
 For irregular verbs
-File name format: practice/irregular_verbs_practice/irregular_verbs_practice_{file_number}.md
+File name format: practice/irregular_verbs_practice/irregular_verbs_practice_{file_number}.html
+Title: Dutch Verb Conjugation Practice - Irregular Verbs (A2 Level)

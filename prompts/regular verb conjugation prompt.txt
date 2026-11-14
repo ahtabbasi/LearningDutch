@@ -1,17 +1,28 @@
 I need to practice Dutch verb conjugation for regular verbs. 
-Give me 20 English sentences to translate to dutch in an MD file. 
+Give me 20 English sentences to translate to Dutch formatted in a standalone HTML file.
 
-The english sentences should be present tense sentences. 
-The english sentences must also contain some questions and some negative statements. 
-The english sentences must also contain some sentences that will result in Inversie in Dutch.
-The english sentences must also contain some sentences that contain a main clause + conjugation + subordinate clause.
-The english sentences must also contain some sentences that contain conjugation + subordinate clause + , + a main clause.
-The english sentences must also contain some sentences that will result in dutch sentences that include dutch modal verbs.
-The english sentences must also contain some sentences that will result in dutch sentences with reflexive verbs.
-The english sentences must also contain some sentences that will result in dutch sentences with separable verbs.
+The English sentences should be present tense sentences. 
+The English sentences must also contain some questions and some negative statements. 
+The English sentences must also contain some sentences that will result in Inversie in Dutch.
+The English sentences must also contain some sentences that contain a main clause + conjunction + subordinate clause.
+The English sentences must also contain some sentences that contain conjunction + subordinate clause + , + a main clause.
+The English sentences must also contain some sentences that will result in Dutch sentences that include Dutch modal verbs.
+The English sentences must also contain some sentences that will result in Dutch sentences with reflexive verbs.
+The English sentences must also contain some sentences that will result in Dutch sentences with separable verbs.
 
 The level of language should be A2. 
-For each sentence, after it, write the answers(dutch translation present tense, perfectum tense, imperfectum tense) 
-in a collapsible format.
 
-File name format: practice/regular_verbs_practice/regular_verbs_practice_{file_number}.md
+Format Requirements:
+- Use valid HTML5 with Pico.css: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+- Navigation at the top: `<a href="../../index.html">← Back to Index</a>`
+- Title: Dutch Verb Conjugation Practice - Regular Verbs (A2 Level)
+- Include global "Expand All" / "Collapse All" buttons.
+- For each sentence (1 to 20):
+  Wrap in an `<article>` with `<h3>{number}. {English sentence}</h3>`
+  Followed by a `<details><summary>Click to see answers</summary>` containing:
+    <p><strong>Present tense:</strong> {Dutch translation present tense}</p>
+    <p><strong>Perfectum:</strong> {Dutch translation perfectum}</p>
+    <p><strong>Imperfectum:</strong> {Dutch translation imperfectum}</p>
+  </details>
+
+File name format: practice/regular_verbs_practice/regular_verbs_practice_{file_number}.html
